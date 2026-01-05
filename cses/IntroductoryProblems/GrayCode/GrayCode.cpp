@@ -18,20 +18,6 @@ string intToBinary(int n) {
   return binary;
 }
 
-string GrayCode(string bin) {
-  string gray_code = "";
-  gray_code += bin[0];
-
-  for (int i = 1; i < bin.length(); i++) {
-    int c1 = static_cast<int>(bin[i]);
-    int c2 = static_cast<int>(bin[i - 1]);
-    int res = c1 ^ c2;
-    gray_code += static_cast<char>(res);
-  }
-
-  return gray_code;
-}
-
 int main() {
   cin.tie(0);
   cout.tie(0);
